@@ -6,7 +6,7 @@
 > Dmitry Demidov, Zaigham Zaheer, Omkar Thawakar, Salman Khan, Fahad Shahbaz Khan
 > Mohamed bin Zayed University of Artificial Intelligence
 > [[arXiv]](https://arxiv.org/abs/2507.23070v1)
-> [[CVF]](https://openaccess.thecvf.com/content/ICCV2025W/MMFM/html/Demidov_Vocabulary-free_Fine-grained_Visual_Recognition_via_Enriched_Contextually_Grounded_Vision-Language_Model_ICCVW_2025_paper.html)
+> [[ICCV]](https://openaccess.thecvf.com/content/ICCV2025W/MMFM/html/Demidov_Vocabulary-free_Fine-grained_Visual_Recognition_via_Enriched_Contextually_Grounded_Vision-Language_Model_ICCVW_2025_paper.html)
 
 The method achieves state-of-the-art results on multiple fine-grained datasets without requiring predefined class labels, expert annotations, prompt engineering, or training.
 
@@ -123,5 +123,5 @@ For questions or collaborations:
 
 ## ⭐ Acknowledgements
 
-This project builds upon and integrates ideas from [CLIP]{https://github.com/openai/CLIP}, [FineR](https://github.com/OatmealLiu/FineR), and recent advances in LLM-based vision-language modeling. 
+This project builds upon and integrates ideas from [CLIP](https://github.com/openai/CLIP), [FineR](https://github.com/OatmealLiu/FineR), and recent advances in LLM-based vision-language modeling. 
 We are thankful to the corresponding authors for making their code public.
