@@ -1,0 +1,6 @@
+# Server
+host: chaos
+num_workers: 4
+
+data_root: ./datasets
+expt_root: ./data/guessed_classnames
