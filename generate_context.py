@@ -12,6 +12,9 @@ from data import DATA_STATS
 GEMINI_API_KEY = "your_api_key"
 genai.configure(api_key=GEMINI_API_KEY)
 
+
+## Provide list of available models 
+# P.S. The exact names can be updated by Google and can be found in Gemini API documentation: https://ai.google.dev/api/models)
 model_names = ["gemini-2.0-flash", "gemini-2.0-flash-exp", 
                "gemini-2.0-flash-lite", "gemini-2.0-flash-lite-preview-02-05", "gemini-2.0-flash-lite-exp", 
 
