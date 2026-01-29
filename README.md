@@ -55,14 +55,16 @@ pip install -r requirements.txt
 ## Usage
 
 ### 1. Prepare Datasets
-For dataset preparation, please follow a beautifully written guide available [here](https://github.com/OatmealLiu/FineR?tab=readme-ov-file#-datasets-preparation).
+For dataset download and preparation, please follow a beautifully written guide available [here](https://github.com/OatmealLiu/FineR?tab=readme-ov-file#-datasets-preparation).
+All meta data needed for the supported datasets is provided in the `data/data_stats.py` file.
 
 ### 2. Classname Discovery
 The discovered class names are provided in the `data/guessed_classnames/` directory for all supported datasets.
 For classname discovery in a custom dataset, please utilize FineR approach [here](https://github.com/OatmealLiu/FineR?tab=readme-ov-file#%EF%B8%8F-full-pipeline).
 
 ### 3. Generate In-Context Sentences
-To generate class-specific in-context sentences, specify the generation config in `generate_context.py` and run:
+The generated in-context sentences are provided in the `data/generated_context/` directory for all supported datasets.
+To re-generate class-specific in-context sentences (or generate for a custom dataset), modify the generation config in `generate_context.py` and run:
 
 ```bash
 python generate_context.py
