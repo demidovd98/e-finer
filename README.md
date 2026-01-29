@@ -54,7 +54,22 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Vocabulary-free Recognition
+### 1. Prepare Datasets
+For dataset preparation, please follow a beautifully written guide available [here](https://github.com/OatmealLiu/FineR?tab=readme-ov-file#-datasets-preparation).
+
+### 2. Classname Discovery
+The discovered class names are provided in the `data/guessed_classnames/` directory for all supported datasets.
+For classname discovery in a custom dataset, please utilize FineR approach [here](https://github.com/OatmealLiu/FineR?tab=readme-ov-file#%EF%B8%8F-full-pipeline).
+
+### 3. Generate In-Context Sentences
+To generate class-specific in-context sentences, specify the generation config in `generate_context.py` and run:
+
+```bash
+python generate_context.py
+```
+
+### 4.1 Vocabulary-free Classification
+To perform vocabulary-free classification on supported datasets, run the corresponding evaluation scripts:
 
 ```bash
 sh run/eval_birds.sh
@@ -64,19 +79,17 @@ sh run/eval_flowers.sh
 sh run/eval_pets.sh
 ```
 
-### Zero-shot Classification
+### 4.2 Zero-shot Classification
 
 ```bash
 TOADD
 ```
 
-### Few-shot Classification
+### 4.3 Few-shot Classification
 
 ```bash
 TOADD
 ```
-
-> Refer to individual scripts for additional options and configuration flags.
 
 ---
 
@@ -113,7 +126,7 @@ If you find this work useful, please cite:
 
 ---
 
-## Contact
+## Contacts
 
 For questions or collaborations:
 
