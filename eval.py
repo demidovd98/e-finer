@@ -98,9 +98,9 @@ def generate_voted_classifier(
 
     if use_context_for_filtration or use_context_for_classification:
         if upper_bound:
-            prompts_path = f"./data/incontext_sentences/{cfg['dataset_name']}s/{cfg['dataset_name']}s_gt_100.json" # !!! change the path !!!
+            context_path = f"./data/incontext_sentences/{cfg['dataset_name']}s/{cfg['dataset_name']}s_gt_100.json" # !!! change the path !!!
         else:
-            prompts_path = f"./data/incontext_sentences/{cfg['dataset_name']}s/{cfg['dataset_name']}s_guessed_100.json"# !!! change the path !!!
+            context_path = f"./data/incontext_sentences/{cfg['dataset_name']}s/{cfg['dataset_name']}s_guessed_100.json"# !!! change the path !!!
 
     gt_classnames = DATA_STATS[cfg['dataset_name']]['class_names']
 
@@ -132,10 +132,10 @@ def generate_voted_classifier(
 
 
     if use_context_for_filtration:
-        # prepare textual part with our prompts for CLIP:
+        # prepare textual part with our incontext sentences for CLIP:
         photo_of = False  # use 'a photo of <class>' template
         
-        path = prompts_path
+        path = context_path
         with open(path, 'r') as f:
             templates = json.load(f)
         
@@ -160,7 +160,7 @@ def generate_voted_classifier(
 
                 except Exception as e:
                     print(f"[WARNING] {e}")
-                    print("[WARNING] No prompts found for classname:", classname, ", use class name as a prompt instead.")
+                    print("[WARNING] No incontext sentences found for classname:", classname, ", use class name as a context instead.")
 
                     texts = classname.split(",")[0] if classname else [classname]
                     if photo_of:
@@ -387,10 +387,10 @@ def generate_voted_classifier(
 
     texts_viz = None
     if use_context_for_classification:
-        # prepare textual part with our prompts for CLIP:
+        # prepare textual part with our incontext sentences for CLIP:
         photo_of = False  # use 'a photo of <class>' template
 
-        path = prompts_path
+        path = context_path
         with open(path, 'r') as f:
             templates = json.load(f)
         
@@ -416,7 +416,7 @@ def generate_voted_classifier(
                         texts = texts
                 except Exception as e:
                     print(f"[WARNING] {e}")
-                    print("[WARNING] No prompts found for classname:", classname, ", use class name as a prompt instead.")
+                    print("[WARNING] No incontext sentences found for classname:", classname, ", use class name as a context instead.")
 
                     texts = classname.split(",")[0] if classname else [classname]
                     if photo_of:
