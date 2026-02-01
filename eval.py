@@ -83,6 +83,7 @@ def generate_voted_classifier(
         expt_id_suffix = ''
 ):
     
+    ## configurable options
     upper_bound = False  # to use ground truth classnames as guessed names
     remove_duplicates = False  # to change capital letters in class-names and remove duplicates
     multi_choice = False  # to also keep variations of original class-names
@@ -90,10 +91,12 @@ def generate_voted_classifier(
         k = 2
         use_top1_img_only = True  # to use image emb for only top1 found classname
 
-    use_our_prompts_before = True  # use generated incotext sentences for voting
-    use_our_prompts_after = True  # use generated incotext sentences for final classifier
+    use_context_for_filtration = True  # use generated incotext sentences for voting
+    use_context_for_classification = True  # use generated incotext sentences for final classifier
+    ##
 
-    if use_our_prompts_before or use_our_prompts_after:
+
+    if use_context_for_filtration or use_context_for_classification:
         if upper_bound:
             prompts_path = f"./data/incontext_sentences/{cfg['dataset_name']}s/{cfg['dataset_name']}s_gt_100.json" # !!! change the path !!!
         else:
@@ -128,7 +131,7 @@ def generate_voted_classifier(
         # voting_encoder, _ = build_clip('ViT-B/16', cfg['device'], jit=False, parallel=False)
 
 
-    if use_our_prompts_before:
+    if use_context_for_filtration:
         # prepare textual part with our prompts for CLIP:
         photo_of = False  # use 'a photo of <class>' template
         
@@ -383,7 +386,7 @@ def generate_voted_classifier(
     if print_classnames: print(gt_included_names)
 
     texts_viz = None
-    if use_our_prompts_after:
+    if use_context_for_classification:
         # prepare textual part with our prompts for CLIP:
         photo_of = False  # use 'a photo of <class>' template
 
