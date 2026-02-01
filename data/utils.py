@@ -412,8 +412,7 @@ def tta(n_px):
         transforms.Resize( (n_px + 16), interpolation=transforms.InterpolationMode.BICUBIC),
         transforms.RandomCrop(n_px, padding=16),
         lambda image: image.convert("RGB"),
-        transforms.RandomApply([transforms.RandomHorizontalFlip()], p=0.6),
-        transforms.RandomHorizontalFlip(),
+        transforms.RandomHorizontalFlip(p=0.5),
 
         transforms.ToTensor(),
         # transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)), # ImageNet
