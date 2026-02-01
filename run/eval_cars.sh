@@ -3,7 +3,6 @@
 ENV_CONFIG_PATH="./configs/env_machine.yml"
 EXPT_CONFIG_PATH="./configs/expts/car196_all.yml"
 
-PYTHON_CMD_DISCOVERY="python -W ignore discovering.py --config_file_env $ENV_CONFIG_PATH --config_file_expt $EXPT_CONFIG_PATH"
 PYTHON_CMD_EVAL="python -W ignore eval.py --config_file_env $ENV_CONFIG_PATH --config_file_expt $EXPT_CONFIG_PATH"
 
 # Core function to execute commands
