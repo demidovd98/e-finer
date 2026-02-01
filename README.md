@@ -42,27 +42,38 @@ All within a single, unified pipeline.
 
 ---
 
-## Installation
-
-```bash
-git clone https://github.com/demidovd98/e-finer.git
-cd e-finer
-pip install -r requirements.txt
-```
-
----
-
 ## Usage
 
-### 1. Prepare Datasets
+### 1. Setup Environment
+
+
+1.1 Set up environment using PIP:
+
+```bash
+pip install -r envs/pip_requirements.txt
+```
+
+1.2 Alternatively, set up environment using Conda:
+
+```bash
+conda env create -f envs/conda_environment.yml
+# or
+conda create --name e_finer --file envs/conda_requirements.txt
+```
+
+```bash
+conda activate e-finer
+```
+
+### 2. Prepare Datasets
 For dataset download and preparation, please follow a beautifully written guide available [here](https://github.com/OatmealLiu/FineR?tab=readme-ov-file#-datasets-preparation).
 All meta data needed for the supported datasets is provided in the `data/data_stats.py` file.
 
-### 2. Classname Discovery
+### 3. Classname Discovery
 The discovered class names are provided in the `data/guessed_classnames/` directory for all supported datasets.
 For classname discovery in a custom dataset, please utilize FineR approach [here](https://github.com/OatmealLiu/FineR?tab=readme-ov-file#%EF%B8%8F-full-pipeline).
 
-### 3. Generate In-Context Sentences
+### 4. Generate In-Context Sentences
 The generated in-context sentences are provided in the `data/generated_context/` directory for all supported datasets.
 To re-generate class-specific in-context sentences (or generate for a custom dataset), modify the generation config in `generate_context.py` and run:
 
@@ -70,7 +81,7 @@ To re-generate class-specific in-context sentences (or generate for a custom dat
 python generate_context.py
 ```
 
-### 4.1 Vocabulary-free Classification
+### 5.1 Vocabulary-free Classification
 To perform vocabulary-free classification on supported datasets, run the corresponding evaluation scripts:
 
 ```bash
@@ -81,13 +92,13 @@ sh run/eval_flowers.sh
 sh run/eval_pets.sh
 ```
 
-### 4.2 Zero-shot Classification
+### 5.2 Zero-shot Classification
 
 ```bash
 TOADD
 ```
 
-### 4.3 Few-shot Classification
+### 5.3 Few-shot Classification
 
 ```bash
 TOADD
