@@ -33,7 +33,6 @@ cffi=2.0.0=pypi_0
 cfgv=3.4.0=pypi_0
 charset-normalizer=3.4.0=pypi_0
 click=8.1.7=pypi_0
-clip=1.0=pypi_0
 cloudpathlib=0.20.0=pypi_0
 confection=0.1.5=pypi_0
 contexttimer=0.3.3=pypi_0

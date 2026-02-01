@@ -46,23 +46,33 @@ All within a single, unified pipeline.
 
 ### 1. Setup Environment
 
+#### 1.1 Set up environment using PIP:
 
-1.1 Set up environment using PIP:
+a. Install Python 3.9.16 (skip if installed already):
+```bash
+# installing Python with conda, but you can use any other method
+conda create -n e_finer python=3.9.16 -y
+conda activate e_finer
+```
 
+b. Install dependencies with PIP:
 ```bash
 pip install -r envs/pip_requirements.txt
 ```
 
-1.2 Alternatively, set up environment using Conda:
+#### 1.2 Alternatively, set up environment using Conda:
 
+a. Install dependencies with Conda:
 ```bash
 conda env create -f envs/conda_environment.yml
 # or
 conda create --name e_finer --file envs/conda_requirements.txt
 ```
 
+b. Activate the environment and install CLIP (non-conda package):
 ```bash
 conda activate e-finer
+pip install git+https://github.com/openai/CLIP.git
 ```
 
 ### 2. Prepare Datasets

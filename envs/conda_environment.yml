@@ -58,7 +58,6 @@ dependencies:
       - cfgv==3.4.0
       - charset-normalizer==3.4.0
       - click==8.1.7
-      - clip==1.0
       - cloudpathlib==0.20.0
       - confection==0.1.5
       - contexttimer==0.3.3
