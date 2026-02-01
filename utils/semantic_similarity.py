@@ -7,7 +7,7 @@ from nltk.corpus import wordnet
 import sys
 import clip
 import torch.nn as nn
-from agents.vlm_bot import build_clip
+from models.clip import build_clip
 
 
 _MODEL_NAMES_BERT = {
