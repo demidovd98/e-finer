@@ -31,13 +31,13 @@ All within a single, unified pipeline.
 
 ## Key Contributions
 
-* **Class-specific Contextual Grounding**
+* **Class-specific Contextual Grounding**.
   Automatically generates rich, descriptive, and diverse class-specific in-context sentences using large vision-language models.
-* **Advanced Class Name Filtration**
+* **Advanced Class Name Filtration**.
   Retains multiple semantically plausible class candidates instead of forcing top-1 selection, improving robustness and recall.
-* **Vision-Language Prompt Coupling**
+* **Vision-Language Prompt Coupling**.
   Combines text and visual embeddings to form stronger class representations without retraining.
-* **Fully Automated & Training-free**
+* **Fully Automated & Training-free**.
   No manual prompts, no training, no expert annotations, no predefined class lists.
 
 ---
